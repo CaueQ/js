@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Cálculo de Troco</title>
+  <script>
+    function calcularTroco() {
+      let produto = prompt("Qual produto você está comprando?");
+      if (!produto) {
+        alert("Você não digitou o nome do produto.");
+        return;
+      }
+
+      let preco = prompt("Qual é o preço do produto?");
+      preco = parseFloat(preco.replace(",", "."));
+      if (isNaN(preco) || preco <= 0) {
+        alert("Preço inválido.");
+        return;
+      }
+
+      let dinheiro = prompt("Quanto em dinheiro o cliente entregou?");
+      dinheiro = parseFloat(dinheiro.replace(",", "."));
+      if (isNaN(dinheiro) || dinheiro < preco) {
+        alert("Valor em dinheiro insuficiente ou inválido.");
+        return;
+      }
+
+      let troco = dinheiro - preco;
+      alert(
+        "Você comprou " + produto + 
+        ", que custa R$" + preco.toFixed(2).replace(".", ",") + 
+        ". Deu R$" + dinheiro.toFixed(2).replace(".", ",") + 
+        " em dinheiro e vai receber R$" + troco.toFixed(2).replace(".", ",") + 
+        " de troco!\n\nVolte sempre!"
+      );
+    }
+  </script>
+</head>
+<body>
+  <h1>Calculadora de Troco</h1>
+  <button onclick="calcularTroco()">Fazer Compra</button>
+</body>
+</html>

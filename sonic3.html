@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Antecessor e Sucessor</title>
+  <script>
+    function calcular() {
+      let numero = prompt("Digite um número inteiro:");
+      if (numero !== null && numero.trim() !== "") {
+        let n = parseInt(numero);
+        if (!isNaN(n)) {
+          let antecessor = n - 1;
+          let sucessor = n + 1;
+          alert("O antecessor de " + n + " é " + antecessor + 
+                "\nO sucessor de " + n + " é " + sucessor);
+        } else {
+          alert("Por favor, digite um número inteiro válido.");
+        }
+      } else {
+        alert("Você não digitou nada.");
+      }
+    }
+  </script>
+</head>
+<body>
+  <h1>Descubra o Antecessor e o Sucessor</h1>
+  <button onclick="calcular()">Clique aqui</button>
+</body>
+</html>

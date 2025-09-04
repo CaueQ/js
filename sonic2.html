@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Botões com Alertas</title>
+  <script>
+    function perguntarNome() {
+      let nome = prompt("Qual é o seu nome?");
+      if (nome) {
+        alert("Olá, " + nome + "!");
+      } else {
+        alert("Você não digitou nada.");
+      }
+    }
+
+    function perguntarIdade() {
+      let idade = prompt("Qual é a sua idade?");
+      if (idade) {
+        alert("Você tem " + idade + " anos.");
+      } else {
+        alert("Você não digitou nada.");
+      }
+    }
+  </script>
+</head>
+<body>
+  <h1>Exemplo de Botões</h1>
+  <button onclick="perguntarNome()">Perguntar Nome</button>
+  <button onclick="perguntarIdade()">Perguntar Idade</button>
+</body>
+</html>
