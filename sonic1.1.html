@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Atividade</title>
+</head>
+<body>
+
+
+  <div class="atividade">
+    <h2>1. Mensagem de Boas-vindas</h2>
+    <p id="boasVindas"></p>
+  </div>
+
+  <script>
+
+    const nome = prompt("Bote teu nome:");
+    const boasVindas = document.getElementById("boasVindas");
+    if (nome) {
+      boasVindas.textContent = `Olá, ${nome}! Seja bem-vindo(a) ao nosso site.`;
+    } else {
+      boasVindas.textContent = "Olá, meu cumpadi! Seja bem-vindo(a) ao nosso site.";
+    }
+
+  </script>
+
+</body>
+</html>

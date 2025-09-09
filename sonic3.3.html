@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Atividade</title>
+</head>
+<body>
+
+  <div class="atividade">
+    <h2>3. Verificação de Maioridade</h2>
+    <button onclick="verificarIdade()">Quantos anos tu tem</button>
+    <p id="resultadoIdade"></p>
+  </div>
+
+  <script>
+
+    function verificarIdade() {
+      const idade = prompt("Bote tua idade:");
+      const resultado = document.getElementById("resultadoIdade");
+
+      if (idade !== null && idade !== "" && !isNaN(idade)) {
+        if (Number(idade) >= 18) {
+          resultado.textContent = "Tu é de maior de idade.";
+        } else {
+          resultado.textContent = "Tu é de menor de idade.";
+        }
+      } else {
+        resultado.textContent = "Por favor, insira uma idade válida.";
+      }
+    }
+  </script>
+
+</body>
+</html>

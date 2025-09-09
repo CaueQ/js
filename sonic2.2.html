@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Atividade</title>
+</head>
+<body>
+
+  <div class="atividade">
+    <h2>2. Contador de Cliques</h2>
+    <button onclick="contarCliques()">Clique aqui</button>
+    <p id="contador">O botão ainda ta do meeeeeermo jeito.</p>
+  </div>
+
+
+  <script>
+
+    let contador = 0;
+    function contarCliques() {
+      contador++;
+      const textoContador = document.getElementById("contador");
+      textoContador.textContent = `O botão já se foi clicado e abençoado ${contador} vez(es).`;
+    }
+
+  </script>
+
+</body>
+</html>
